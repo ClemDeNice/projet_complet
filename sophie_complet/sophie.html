@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Sophie Photographies - Vos photos, ma passion</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+
+    <body>
+        <!--barre de navigation-->
+        <nav class="main-navbar">
+            <img
+                src="photos/logo.png" 
+                class="logo"
+                alt="Sophie Photographies"/>
+
+            <ul class="links-container">
+                <li><a href="#informations">Qui suis-je?</a></li>
+                <li><a href="#creations">Mes créations</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#contact">Contactez-moi</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="header-content">
+                <h1>Sophie Photographies</h1>
+                    <p>Vos photos, ma passion</p>
+            </div>
+        </header>
+
+        <section id="informations"> 
+            <div class="left-content"> 
+            <h2 class="section-title">Qui suis-je?</h2>
+                <p class="section-content">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore blanditiis magni beatae vitae magnam,
+                    illum exercitationem sint praesentium repellat, deleniti laboriosam dolorem eligendi tenetur quasi.
+                    <br/>
+                    <br/>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident natus dolores iste? Modi temporibus nemo nesciunt, ut recusandae facilis rem placeat in velit ratione tempore fugiat consequuntur eos impedit optio vitae iste commodi excepturi eveniet explicabo quasi nostrum sapiente? Consequuntur.</p>
+                    </br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Natus quis tempora rerum repellat assumenda consequuntur recusandae minus!
+                </p>
+                 <p class="signature">-Sophie</p>
+             </div>
+        <div class="right-content"></div>
+        </section>
+
+<!-- Block créations-->
+        <section id="creations">
+            <h2 class="section-title">Mes Créations</h2>
+            <ul class="creations-container">
+                <li class="picture-container">
+                    <img src="Photos/picture1.jpg" class=" alt="photo mariage"/>
+                </li>
+                <li class="picture-container">
+                    <img src="photos/picture2.jpg" alt="photo professionnel"/>
+                </li>
+                <li class="picture-container">
+                    <img src="photos/picture3.jpg" alt="photo vacances"/>
+                </li>
+                <li class="picture-container">
+                    <img src="photos/picture5.jpg" alt="photo voyage"/>
+                </li>
+                <li class="picture-container">
+                    <img src="photos/picture7.jpg"alt="photo mariage"/>
+                </li>
+                <li class="picture-container">
+                    <img src="photos/picture8.jpg" alt="photo entreprise"/>
+                </li>
+            </ul>
+            </div>
+
+        </section>
+
+        <section id="pricing">
+            <h2 class="section-title">Tarifs</h2>
+            <table class="price-table">
+                <thead>
+                    <tr><!--colone-->
+                        <th>Préstation</th><!--th veut dire table header et permet de mettre en gras et de centrer-->
+                        <th>Description</th><!--celulles ou données-->
+                        <th>Durée</th>
+                        <th>Prix/HT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Portrait simple</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, esse.</td>
+                        <td>X min</td>
+                        <td>X €</td>
+                     </tr>
+                     <tr>
+                         <td>Groupe</td>
+                         <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, dolorem?</td>
+                         <td>X min</td>
+                         <td>X €</td>
+                     </tr>
+                     <tr>
+                         <td>Anniversaires</td>
+                         <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, hic! </td>
+                         <td>X min</td>
+                         <td>X €</td>
+                     </tr>
+                     <tr>
+                         <td>Mariage</td>
+                         <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, magni?</td>
+                         <td>X min</td>
+                         <td>X €</td>
+                     </tr>
+                </tbody>
+            </table>
+        </section>
+        
+
+        <section id="contact">
+            <h2 class="section-title">Contactez-moi</h2>
+            <form class="contact-form"><!--"form" comme formulaire-->
+                <label class="text-input-label"for="firstname">Prénom</label><!--permet de donner un titre a la barre de recherche-->
+                <input type="text" id="firstname" name="prénom"/><!--text va cree une barre ou l'on peut taper du texte; number va permettre de taper des numeros, date une agenda...-->
+                
+                <label class="text-input-label"for="name">Nom</label>
+                <input type="text" id="name" name="nom"/>
+                
+                <label class="text-input-label"for="e-mail"> E-mail</label>
+                <input type="text" id="e-mail" name="e-mail"/>
+
+                <label class="text-input-label"for="message">Message</label>
+                <textarea></textarea><!--permet de mettre un boite de texte ex: des commentaires-->
+           
+            </br>
+            
+                <input type="checkbox" id="checkbox" name="validation">
+                <label for="checkbox"class="checkbox-label">J'accepte que mes données ci-dessus soient traitées à des fins de prises de contact commerciales</label>
+                
+                <br />
+
+                <button class="pulse">Envoyer</button>
+               
+            </form>
+        </section>
+
+        <footer>
+            <p class=> &copy;Sopie Photographie 2020</p>
+        </footer>
+    </body>
+</html>

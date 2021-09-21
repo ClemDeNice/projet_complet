@@ -1,0 +1,202 @@
+body{/*corp visible de ma page*/
+    background-color: rgb(224, 220, 220);/*couleur de fond*/
+    font-family: sans-serif;/*style d'écriture*/
+    margin: 0px; /*valeur à zero, enlève la marge (orange)entre les éléments présents dans la page et le bord*/ 
+    padding:0px;
+}
+.main-navbar{                   /*barre de navigation*/
+    background-color: white; 
+    box-shadow: 0px 0px 16px;
+    height: 64px; 
+    z-index: 100;/*permet de définir le plan dans lequel des éléments sont affichés.Plus le z-index est élevé, plus l'élément "sera au premier plan". Par exemple un élément au z-index de 10 sera affiché par dessus un élément au z-index de 9*/
+    position: fixed;/*permet à la barre de navigation de rester fixe lorsqu'on scroll la page*/
+    top: 0px;/* permet de ne pas avoir d'espace en haut et donc colle la barre en haut de page*/
+    left: 0px;/*cela va permettre à la barre de rester collé à gauche*/
+    right:0px;/*cela va permettre à la barre de rester collé à droite*/
+    /*graçe à top,left et right la bar de navigation va rester collé en haut à droit et à gauche*/
+}
+.main-navbar .links-container{
+     float:right; /*déplace l'élément vers: la droite*/
+      list-style:none;/*permet d'enlever les points ou chiffres devant les listes*/
+      margin:0px;
+      
+     
+}
+.main-navbar .links-container li{
+    display:inline-block; /*permet d'aligner les <li> hotizontalement*/
+    line-height:44px;/*permet de déplacer les liens sur la hauteur ex: plus le nombre est haut plus les liens vont descendre*/
+    height:50px;
+    padding: 7px 10px;/*cela signifie que le haut et le bas prennent 7px et la gauche et la droite 20px(influe également sur la zone de couleur  pour le :hover*/ 
+    margin: 0px;
+}
+.main-navbar .links-container li a{/*cette adresse montre le chemin pour modifier les <li><a href>*/
+     text-decoration:none ; /*enlève le surlignage du lien*/
+     color:black;/* color en noir au lieu de violet lorsque celui-ci est utilisé*/
+     
+     
+}
+.main-navbar .links-container :hover{/*permet de modifier l'apparence ou l'action lorsque la souris passe dessus*/
+    background-color:rgb(36, 36, 36);
+    color:white;
+    cursor: pointer;/*defini un style de pointer lorsque celui-ci passe dessus*/
+}
+.logo{/* penser a modifier la taille du logo afin qu'il soit dans la barre de navigation sinon il depasse*/
+ height: 50px;/*taille du logo*/
+ margin-top: 5px;/*permet de le centrer par rapport à la taille de la barre de navigation qui fait 60px ex 5 top et 5 bottom le logo sera centré*/
+ margin-bottom: 5px;
+ margin-left: 5px;
+}
+
+header {
+    font-size:40px;
+    text-align: center;
+    background-image: url("Photos/top.jpg");
+    background-size:cover; /*L'image est redimensionnée pour être aussi grande que possible et pour conserver ses proportions. L'image couvre toute la largeur ou la hauteur du conteneur et les parties qui dépassent sont rognées si les proportions du conteneur sont différentes*/
+    min-height: 100vh;/*permet de dire que la hauteur min sera la taille de l'image. Cela permet de ne pas avoir l'image coupé si elle est plus grande que le header.!Ne marche pas si l'on met 100%! 1vw = 1% de la largeur de la fenêtre
+    1vh = 1% de la hauteur de la fenêtre
+    1vmin = 1vw ou 1vh, selon la valeur la plus petite
+    1vmax = 1vw ou 1vh, selon la plus grande des deux*/ 
+}
+header .header-content {
+    padding-top:230px;/*permet de centrer le texte dans l'image*/
+    color: white;
+    font-size: 40px;   
+}
+
+header .header-content p{
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body section{
+    text-align: center;
+    padding:10px;
+}
+
+#informations{
+    background-color:white;
+    text-align: inherit;/*inherit annule l'effet qui a été donné a cette class si elle fait partie d'un groupe qui a reçu une action.*/
+    min-height:70vh;/* va definir l'espace que va prendre le texte dans la page. 70vh=70% dans la hauteur*/
+    margin:0px;
+    display: flex;/*cette action va permettre au texte de co-habiter avec la photo dans la même zone*/
+    padding:0px;   
+}
+
+#informations .right-content{
+   background-image: url("Photos/sophie.jpg"); 
+   background-size: cover;/*va permettre a l'image d'occuper tout l'espace disponible*/
+   width:50%;/*va definir la taille de mon image par rapport a la zone*/
+   float: right;      
+}
+
+#informations .left-content{
+   width:50%;
+    text-align:justify;
+    flex: 1;
+    padding:15px;
+}
+
+body section .category-title,.section-title {
+    font-size: 24px;
+    font-weight:normal; /*permet d'enlever le texte en "gras"*/  
+}
+
+.signature{
+    text-align: right;
+    padding-bottom: 15%;
+}
+
+#creations{
+    background-color:rgb(16, 16, 16);
+    min-height:100vh;
+    background-size: cover;
+}
+
+#creations .section-title{
+    color: white;
+}
+#creations .creations-container{
+    display: flex;/*met les éléments en ligne*/
+    flex-wrap: wrap;/*déplace les éléments a la ligne lorsque ceux-ci dépassent*/
+    justify-content: center;/*centre les éléments*/
+}
+
+#creations .creations-container .picture-container {
+    list-style: none;
+   flex-basis: 350px;/*toute les photos feront par default au maximum 300px mais si elles ont en lignes elle se verront coupé si elles doivent depasser. Donc utiliser flex-wrap: wrap; pour les mettres a la ligne*/
+   padding:20px;/*dans ce cas, va définir une marge autour des photos pour pas qu'elles se touchent*/
+}
+
+#creations .creations-container .picture-container img{  
+    width:100%;
+}
+
+#pricing{
+    background-color:white;
+    padding: 50px;
+}
+
+table{
+    margin:auto;
+}
+
+#contact{
+    padding-top:30px;
+    background-color:rgb(16, 16, 16);
+    color:white;
+}
+
+td,th{
+ border:1px solid black;
+ padding:24px;
+ text-align: left;
+}
+
+th{
+    background-color:black;
+    color:white;
+    font-weight: bold;
+}
+
+.price-table{
+    border-collapse: collapse;
+}
+
+#contact .contact-form{
+    margin: auto; /*centre les colones dans la zone*/
+    width: 50vw; /* longeur de la zone de texte*/
+    text-align: left;/*place le texte a gauche*/
+    padding: 30px;/*contour noir*/
+}
+
+#contact .contact-form input[type="text"],
+#contact .contact-form input[type="email"],
+#contact .contact-form textarea{/*effet sur les input dans ce cas il a été fait expres de ne pas inclure le checkbox afin qu'il conserve sa mise en forme carré puis texte*/
+    border: 0px;/*va enlever l'effet de volume a la zone de texte*/
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 17px;/*défini la taille de la zone de texte*/
+    width: 100%;/*défini la longeur*/
+    margin-bottom: 20px;/*espace les colones entre elles*/
+}
+
+button{
+    height:30px;
+    weight:40px;
+    font-weight:bold;
+}
+
+    .pulse:hover, 
+    .pulse:focus {
+      animation: pulse 1s;
+      box-shadow: 0 0 0 2em rgba(#fff,0); 
+}
+
+body footer{
+    background-color:rgb(79, 79, 79);
+    color:white;
+    text-align:center;
+    margin: 0px;
+    padding:8px;
+}
+
